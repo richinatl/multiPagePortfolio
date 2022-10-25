@@ -1,0 +1,352 @@
+:root {
+    --color-primary: #2403fc;
+    --color-secondary: #3aacee;
+    --color-headings: #3c1fe2;
+    --color-body: #7c7896;
+    --color-border: rgb(214, 210, 210);
+    --border-radius: 20px;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  /* Typography */
+  ::selection {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: var(--color-body);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    font-size: 5rem;
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 1.6rem;
+    }
+  
+    h1 {
+      font-size: 8rem;
+    }
+  
+    h2 {
+      font-size: 4rem;
+    }
+  
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+  /* Links */
+  a {
+    text-decoration: none;
+    color: var(--color-headings);
+    transition: color 0.03s ease-out;
+  }
+  a:hover {
+    color: var(--color-secondary);
+  }
+  /* Lists */
+  .list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .list--inline .list__item {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  
+  .list__item {
+    color: #333;
+    font-weight: 700;
+  }
+  .list__link {
+    padding-top: 2rem;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .list__link {
+      font-size: 1.6rem;
+    }
+  }
+  
+  .list__item .li__description {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .list__item .li__description {
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* Blocks */
+  .block {
+    --padding-vertical: 5rem;
+    padding: 2rem;
+  }
+  
+  .block__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .block__heading {
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+  }
+  
+  .banner__image {
+    border-radius: 50%;
+  }
+  
+  .block--dark {
+    background: var(--color-primary);
+    color: #7b858b;
+    padding: 5rem;
+  }
+  
+  .block--dark h1,
+  .block--dark h2,
+  .block--dark h3 {
+    color: #fff;
+  }
+  
+  .block--skewed-left {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 4rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+  }
+  
+  /* Navigation Bar */
+  .nav--header {
+    background: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    align-items: flex-start;
+  }
+  
+  .nav__list {
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+  
+  .nav__item {
+    padding: 1rem 5rem;
+  }
+  
+  .nav__item > a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .nav__item > a:hover {
+    color: var(--color-secondary);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .nav__list {
+      width: auto;
+      display: flex;
+      font-size: 1.6rem;
+      max-height: 100%;
+    }
+  
+    .nav__item {
+      border: 0;
+    }
+  }
+  /* Banner Block*/
+  
+  .banner__tagline {
+    color: #b9c3cf;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 2rem 2rem 5rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .banner__content {
+      text-align: left;
+      align-self: center;
+    }
+  }
+  
+  /* Skills Block */
+  .block--skills .grid {
+    padding-bottom: 2rem;
+  }
+  .skill__name {
+    padding-bottom: 2rem;
+  }
+  
+  
+  /* Cards */
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    padding: 5rem;
+    transition: transform 0.3s ease-out;
+  }
+  
+  @media screen and (min-width:1024px) {
+    .card {
+      max-height: 70vh;
+    }
+  }
+  
+  .card__header,
+  .card__body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+  /* About me block */
+  .aboutme--block {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: left;
+  }
+  .aboutme__heading {
+    color: var(--color-headings);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: left;
+  }
+  .aboutme__statement {
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+  }
+  .work__heading {
+    color: var(--color-headings);
+    font-size: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    .aboutme__statement {
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+    .aboutme__heading {
+      padding-top: 10rem;
+      text-align: center;
+    }
+    .work__heading {
+      text-align: center;
+    }
+  }
+  /* Footer */
+  .contact__details {
+    background-color: var(--color-secondary);
+    margin-top: 5rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+  .contact__list {
+    display: block;
+    margin-left: 4rem;
+    padding-bottom: 2rem;
+  }
+  .footer__item {
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.2s;
+  }
+  .footer__item > a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  .footer__item:hover {
+    opacity: 0.9;
+  }
+  .footer__item > a:hover {
+    opacity: 0.9;
+  }
+  .footer--heading {
+    color: #fff;
+    font-size: 4rem;
+    margin-left: 4rem;
+  }
+  @media screen and (min-width: 768px) {
+    .contact__details {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+  /* Grids */
+  .grid {
+    display: grid;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .grid--1x2 {
+      grid-template-columns: repeat(1, 2fr 1fr);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .grid--3x2 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 2rem;
+      row-gap: 4rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+  
