@@ -366,18 +366,20 @@ font-family: 'Playfair Display', serif; */
     color: #fff;
     font-size: 2rem;
     margin-bottom: 1rem;
-    transition: color 0.2s;
   }
+
   .footer__item > a {
     color: #fff;
-    transition: color 0.3s;
   }
-  .footer__item:hover {
-    opacity: 0.9;
-  }
+
   .footer__item > a:hover {
-    opacity: 0.9;
+    color: var(--color-primary);
   }
+
+  .footer__item > a {
+    transition: color 0.8s ease-out;
+  }
+
   .footer--heading {
     color: #fff;
     font-size: 4rem;
