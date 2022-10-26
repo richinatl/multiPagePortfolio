@@ -126,6 +126,30 @@
   }
   
   /* Blocks */
+  .h1__animation {
+    animation-duration: 3s;
+    animation-name: title;
+    animation-timing-function: ease-in-out;
+    color: #15db95;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 7.5rem;
+    font-weight: bolder;
+    padding-top: 3rem;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 2px 15px #e4c580
+}
+
+@keyframes animation {
+    from {right: 40rem}
+    to {right: 0px}
+}
+
+@media screen and (min-width: 768px) {
+    .banner__title {
+        font-size: 10rem;
+    }
+}
   .block {
     --padding-vertical: 5rem;
     padding: 2rem;
